@@ -1,0 +1,1 @@
+# aiijc_2024_samolet_scoring
