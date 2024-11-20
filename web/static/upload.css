@@ -1,0 +1,156 @@
+body {
+    /* background-color: #f8f9fa; */
+    background-image: url('/static/back.jpg');
+    /*background: rgb(2,0,36);*/
+    /*background: linear-gradient(90deg, rgba(2,0,36,1) 9%, rgba(47,128,237,1) 52%, rgba(86,204,242,1) 82%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+h1{
+    color: white;
+    font-family: Consolas, monaco, monospace;
+    font-size: 300%;
+
+
+}
+.aiai{
+    margin-bottom: 3.5%;
+  display: inline-block;
+}
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(100, end) forwards;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+.upload-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.upload-container input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.upload-container button {
+    width: 100%;
+}
+
+.flash-message {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.upload-container {
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    color: white;
+}
+
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+tbody {
+    color: white;
+}
+
+table.table {
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    font-size: 50%; /* Уменьшаем размер шрифта до 10% от исходного */
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.table th,
+table.table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    padding: 0.2rem; /* Уменьшаем отступы внутри ячеек */
+    line-height: 1; /* Уменьшаем высоту строки */
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset white;
+    animation: l4 2.5s infinite;
+    webkit-animation: l4 2.5s infinite;
+    -moz-animation: l4 2.5s infinite;
+    -ms-animation: l4 2.5s infinite;
+    -o-animation: l4 2.5s infinite;
+}
+
+.loader:after {
+    animation-delay: -1.25s;
+}
+
+@keyframes l4 {
+    0% {
+        inset: 0 35px 35px 0;
+    }
+    12.5% {
+        inset: 0 35px 0 0;
+    }
+    25% {
+        inset: 35px 35px 0 0;
+    }
+    37.5% {
+        inset: 35px 0 0 0;
+    }
+    50% {
+        inset: 35px 0 0 35px;
+    }
+    62.5% {
+        inset: 0 0 0 35px;
+    }
+    75% {
+        inset: 0 0 35px 35px;
+    }
+    87.5% {
+        inset: 0 0 35px 0;
+    }
+    100% {
+        inset: 0 35px 35px 0;
+    }
+}

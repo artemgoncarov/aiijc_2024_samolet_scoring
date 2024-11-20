@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Interpretation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container upload-container mt-5">
+    <h2 style="padding-top: 5%">Score Interpretation from {{flname}} Top {{k}} features with most impact on score</h2>
+
+    <!-- Input fields for updating rows and features -->
+    <form method="post">
+        <div class="form-group">
+            <label for="numRows">Number of Row for interpretation in DataFrame:</label>
+            <input type="number" class="form-control" id="numRows" name="num_rows" placeholder="Enter number of row: default - all">
+        </div>
+        <div class="form-group">
+            <label for="numFeatures">Number of Features in Interpretation:</label>
+            <input type="number" class="form-control" id="numFeatures" name="num_features" placeholder="Enter number of features: default - 5">
+        </div>
+        <button type="submit" class="btn btn-success">Show</button>
+    </form>
+
+    <!-- Display the table -->
+    <table class="table table-striped table-bordered" style="font-size: 15px; line-height:5px; ">
+            <thead class="thead-dark">
+            <tr>
+                {% for header in headers %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Отображение количества строк и колонок -->
+        <p>Total Rows: {{ total_rows }}</p>
+        <p>Total Columns: {{ total_columns }}</p>
+
+    <!-- Buttons -->
+
+    <div class="mt-4">
+        <a href="/download?path={{path}}" class="btn btn-primary">Download CSV</a>
+        <button onclick="goBack()" class="btn btn-secondary">Back to Predictions Table</button>
+    </div>
+    <div class="mt-5">
+        <h4>Visualization for specific row</h4>
+        <img src="data:image/png;base64,{{ boxplot_base64 }}" class="img-fluid" alt="Visualization for specific row">
+    </div>
+    <!-- Placeholder for an image -->
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
+</body>
+</html>

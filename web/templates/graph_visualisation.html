@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph Visualisation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container upload-container mt-5">
+    <h2 class="mb-4">Contractors distance Graph Visualisation</h2>
+    <img src="data:image/png;base64,{{ boxplot_base64 }}" class="img-fluid" alt="Box Plot">
+    <button onclick="goBack()" class="btn btn-secondary mt-4">Back to Predictions Table</button>
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>

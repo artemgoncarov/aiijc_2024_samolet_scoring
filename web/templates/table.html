@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='table.css')}}">
+    <title>Predictions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="aiai">
+    <div class="typed-out">
+        <h1>Company default prediction system</h1>
+    </div>
+</div>
+<div class="upload-container">
+    <h2>Upload Your CSV File</h2>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash-message">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" class="form-control-file" id="file" name="file" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 25%">Upload another</button>
+    </form>
+    <div class="container mt-5" style="width: 100%">
+        <h2>Final predictions from {{flname}}</h2>
+        <table class="table table-striped table-bordered" style="font-size: 16px">
+            <thead class="thead-dark">
+            <tr>
+                {% for header in headers %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Отображение количества строк и колонок -->
+        <p>Total Rows: {{ total_rows }}</p>
+        <p>Total Columns: {{ total_columns }}</p>
+
+        <!-- Кнопка для скачивания таблицы -->
+        <a href="/download?path={{path}}" class="btn btn-primary">Download CSV</a>
+        <div class="mt-4">
+            <button onclick="window.location.href='/show_histogram?path={{ path }}∫{{ flname }}'" class="btn btn-secondary">Score
+                Histogram
+            </button>
+            <button onclick="window.location.href='/interpret_score?path={{ path }}∫{{ flname }}'" class=" btn btn-primary">Score
+                Interpretation
+            </button>
+            <button onclick="window.location.href='/find_best_contractor?path={{ path }}∫{{ flname }}'" class="btn btn-success">Find
+                Top 10 Best Contractors
+            </button>
+            <button onclick="window.location.href='/data_analysis?path={{ path }}∫{{ flname }}'" class="btn btn-warning" style="background-color: #8F68FF; border-color: #8F68FF; color: white">Data
+                Analysis Page
+            </button>
+             <button onclick="window.location.href='/graph_visualisation?path={{ path }}∫{{ flname }}'" class="btn btn-info" >Contractor
+                Graph Visualisation
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>

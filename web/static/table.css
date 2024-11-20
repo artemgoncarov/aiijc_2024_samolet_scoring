@@ -1,0 +1,98 @@
+body {
+    /* background-color: #f8f9fa; */
+    background-image: url('/static/back.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.upload-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.upload-container input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.upload-container button {
+    width: 100%;
+}
+
+.upload-container {
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    color: white;
+}
+h1{
+    color: white;
+    font-family: Consolas, monaco, monospace;
+    font-size: 300%;
+
+}
+.aiai{
+    margin-bottom: 3.5%;
+  display: inline-block;
+}
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(100, end) forwards;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+
+.flash-message {
+    color: green;
+    margin-bottom: 15px;
+}
+
+table.table {
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    font-size: 50%;
+    /* Уменьшаем размер шрифта до 10% от исходного */
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+}
+
+tbody {
+    color: white;
+}
+
+table.table th,
+table.table td {
+    padding: 0.2rem; /* Уменьшаем отступы внутри ячеек */
+    line-height: 1; /* Уменьшаем высоту строки */
+}
