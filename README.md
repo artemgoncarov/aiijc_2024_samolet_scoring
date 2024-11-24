@@ -1,6 +1,6 @@
 # AI Challenge. Группа Самолет - Девелопмент
 
-## Решение команды [RASCAR] MLшарики 2.0
+## Решение топ 1 команды [RASCAR] MLшарики 2.0
 ### Члены команды:
 [Артём Гончаров](https://github.com/artemgoncarov) \
 [Матвей Беляев](https://github.com/moti4k)
