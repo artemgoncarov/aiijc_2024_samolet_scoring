@@ -97,7 +97,7 @@
 
 # Screencast
 
-[](https://rutube.ru/play/embed/8ef91a83236b6260dbbd6f54dde96bb3)
+[![](https://i.imgur.com/yw9yTy0.png)](https://rutube.ru/play/embed/8ef91a83236b6260dbbd6f54dde96bb3/)
 
 # Run
 
