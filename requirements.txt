@@ -1,0 +1,13 @@
+pandas
+catboost
+scikit-learn
+xgboost
+lightgbm
+numpy==1.24.0
+tqdm
+joblib
+shap
+optuna
+flask
+feature_engine
+networkx
