@@ -97,9 +97,7 @@
 
 # Screencast
 
-```
-<iframe width="720" height="405" src="https://rutube.ru/play/embed/8ef91a83236b6260dbbd6f54dde96bb3/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-```
+[](https://rutube.ru/play/embed/8ef91a83236b6260dbbd6f54dde96bb3)
 
 # Run
 
