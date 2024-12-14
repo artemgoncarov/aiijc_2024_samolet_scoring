@@ -203,3 +203,4 @@ python app.py
 
 https://t.me/rascar_ai \
 https://t.me/ml_with_artem
+https://t.me/moti4kaa
